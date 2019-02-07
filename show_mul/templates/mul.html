@@ -9,6 +9,11 @@
 		<table>
 			<tr>
 				<th>
+					{% for mul in mul_list %}
+					<p id={{ forloop.counter0 }}>{{mul.id}}</p>
+					{{show_num}} x {{mul.id}} = {{mul}} 
+					{% endfor %}
+					<br>
 					{{show_num}} {{show_num}} {{show_num}}
 				</th>
 			</tr>
