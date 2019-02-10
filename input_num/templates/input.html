@@ -3,7 +3,14 @@
 		<title>input number</title>
 	</head>
 	<body>
-		<input type="text" name=a>
-		<input type="submit" value=a>
+		<form method='POST' action=''>
+			{% csrf_token %}
+			<h1>Input Number</h1>
+			<hr><br>
+			<input type="text" name=name>
+			<input type="submit" value=submit>
+			</br>
+			{{out_num}}
+		</form>
 	</body>
 </html>
