@@ -1,9 +1,9 @@
 <html>
 	<head>
-		<title>mul table No.9</title>
+		<title>mul table No.</title>
 	</head>
 	<body>
-		<h1>Show number</h1>
+		<h1>Show mulitiplication for number</h1>
 		<hr>
 		<style>table {border: 1px solid black;}</style>
 		<table>
@@ -11,10 +11,9 @@
 				<th>
 					{% for mul in mul_list %}
 					<p id={{ forloop.counter0 }}>{{mul.id}}</p>
-					{{show_num}} x {{mul.id}} = {{mul}} 
+					{{mul}} 
 					{% endfor %}
 					<br>
-					{{show_num}} {{show_num}} {{show_num}}
 				</th>
 			</tr>
 		</table>
