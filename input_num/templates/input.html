@@ -20,6 +20,18 @@
 				{% endfor %}
 			</th></tr>
 		</table>
-		{{show_num}}
+		</br>
+		<table>
+			<tr><th>
+				{% for element in total %}
+				<td>
+				{{element.num}}
+				</td>
+				<td>{{element.total}}
+				</td>
+				{% endfor %}
+			</th></tr>
+		</table>
+		{{ total.total_text }}
 	</body>
 </html>
