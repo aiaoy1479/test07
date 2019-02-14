@@ -1,15 +1,19 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from .models import Total_input
 
 def input(request):
     num_input = ""
-    number = []
     if request.POST:
         num_input = request.POST['name']
         mul = []
-        total = Total_input(num = num_input, total = 1)
-        total.save()
         show_total = Total_input.objects.all()
+        try:
+            totals = Total_input.objects.get(num=num_input)
+            totals.total += 1
+            totals.save()
+        except Total_input.DoesNotExist:
+            totals = Total_input(num = num_input, total = 1)
+            totals.save()
 
         try:
             number = int(float(num_input))
