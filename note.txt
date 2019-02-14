@@ -1,0 +1,3 @@
+- model Number and total
+- Function input number in database
+- Error (Try to show number)
