@@ -4,10 +4,12 @@ def input(request):
     input_num = ""
     if request.POST:
         input_num = request.POST['name']
+        mul = []
         try:
-            if float(input_num)*0 == 0:
-                pass
+            num = int(float(input_num))
+            for i in range(1,13,1):
+                mul.append(str(num) + " X " + str(i) + " = " + str(num*i))
         except ValueError:
-            input_num = "It's not number."
-        return render(request, 'input.html', {'out_num': input_num})
+            mul.append("It's not number.")
+        return render(request, 'input.html', {'mul_list':mul})
     return render(request, 'input.html')

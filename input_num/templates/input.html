@@ -10,7 +10,15 @@
 			<input type="text" name=name>
 			<input type="submit" value=submit>
 			</br>
-			{{out_num}}
 		</form>
+<style>table {border: 1px solid black;}</style>
+		<table>
+			<tr><th>
+				{% for mul in mul_list %}
+				{{mul}}
+				</br>
+				{% endfor %}
+			</th></tr>
+		</table>
 	</body>
 </html>
